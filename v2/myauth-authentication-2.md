@@ -8,8 +8,8 @@
 
 ```
 Authorization: MyAuth2
-X-Claims-<claim-name>: <claim-value>
-X-Claims-<claim-name>: <claim-value>
+X-Claim-<claim-name>: <claim-value>
+X-Claim-<claim-name>: <claim-value>
 ...
 ```
 
@@ -19,7 +19,7 @@ X-Claims-<claim-name>: <claim-value>
 
 Формат заголовка:
 
-* приставка `X-Claims-`;
+* приставка `X-Claim-`;
 * разделитель слов `-`;
 * слова с буквы в верхнем регистре.
 
@@ -32,16 +32,16 @@ X-Claims-<claim-name>: <claim-value>
 
 Существуют зарезервированные имена параметров, которые не рекомендуется использовать для непредусмотренных значений:
 
-* `X-Claims-User-Id` - идентификатор субъекта (например, идентификатор пользователя). Обязательное утверждение;
-* `X-Claims-Roles` - список ролей субъекта. Для случая, если субъект может соответствовать нескольким ролям;
-* `X-Claims-Role` - роль субъекта. Для случая, если субъект может иметь только одну роль.
+* `X-Claim-User-Id` - идентификатор субъекта (например, идентификатор пользователя). Обязательное утверждение;
+* `X-Claim-Roles` - список ролей субъекта. Для случая, если субъект может соответствовать нескольким ролям;
+* `X-Claim-Role` - роль субъекта. Для случая, если субъект может иметь только одну роль.
 
 ## Пример
 
 ```
 Authorization: MyAuth2
-X-Claims-User-Id: user-1232323
-X-Claims-User-GivenName: John
-X-Claims-User-Surname: Kramer
-X-Claims-Roles: admin, user
+X-Claim-User-Id: user-1232323
+X-Claim-User-GivenName: John
+X-Claim-User-Surname: Kramer
+X-Claim-Roles: admin, user
 ```
